@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>汉焱巨美特 · DAMiYA达美亚 | 养肤式祛斑 · 一对一私人定制</title>
+  <meta name="description" content="汉焱巨美特养肤式祛斑——资深专业老师操作，一对一私人定制。专注祛除老年斑、表皮斑、真皮斑、雀斑、空心斑、黄褐斑。全国招商合作热线：13562024562">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --pr: #B8864E;
+      --pr-dark: #8B6B3D;
+      --pr-light: #D4A96A;
+      --sd: #7A5C3A;
+      --sd-light: #C8B094;
+      --ac: #C4604A;
+      --ac-light: #D97A64;
+      --rose: #E8C4C0;
+      --rose-light: #F5E8E4;
+      --dc: #2A2520;
+      --dc-80: rgba(42,37,32,.80);
+      --dc-60: rgba(42,37,32,.60);
+      --dc-40: rgba(42,37,32,.40);
+      --dc-12: rgba(42,37,32,.12);
+      --dc-06: rgba(42,37,32,.06);
+      --ww: #FCF8F4;
+      --lw: #F7F0E8;
+      --sf: #EFE4D8;
+      --gold: #C9A96E;
+      --gold-light: #E8D5B0;
+      --ff-serif: 'EB Garamond','Noto Serif SC',Georgia,serif;
+      --ff-sans: 'Outfit','Noto Sans SC',-apple-system,sans-serif;
+      --ease: cubic-bezier(.22,.58,.18,.98);
+      --dur: .7s;
+    }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body { font-family: var(--ff-sans); color: var(--dc); background: var(--ww); line-height: 1.6; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+
+    ::selection { background: var(--pr); color: #fff; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 22px 48px; display: flex; align-items: center; justify-content: space-between;
+      transition: background var(--dur) var(--ease), padding var(--dur) var(--ease);
+    }
+    nav.scrolled { background: rgba(252,248,244,.94); backdrop-filter: blur(20px); padding: 14px 48px; }
+    .nav-logo {
+      font-family: var(--ff-sans); font-size: 20px; font-weight: 700;
+      color: var(--ww); letter-spacing: .06em; transition: color var(--dur) var(--ease);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-logo span { font-weight: 300; color: var(--gold-light); letter-spacing: .12em; font-size: 11px; text-transform: uppercase; }
+    nav.scrolled .nav-logo { color: var(--pr-dark); }
+    nav.scrolled .nav-logo span { color: var(--pr); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { text-decoration: none; font-size: 12px; font-weight: 500; color: rgba(255,255,255,.6); letter-spacing: .08em; transition: color .3s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--gold-light); transition: width .4s var(--ease); }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { width: 100%; }
+    nav.scrolled .nav-links a { color: var(--dc-60); }
+    nav.scrolled .nav-links a:hover { color: var(--pr); }
+    nav.scrolled .nav-links a::after { background: var(--pr); }
+    .nav-cta { padding: 10px 28px; border-radius: 6px; background: var(--ac); color: #fff !important; font-weight: 600; font-size: 11px; letter-spacing: .1em; transition: background .3s, transform .3s; }
+    .nav-cta:hover { background: var(--ac-light) !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+    .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .burger span { display: block; width: 26px; height: 2px; background: var(--ww); border-radius: 2px; transition: all .3s; }
+    nav.scrolled .burger span { background: var(--dc); }
+    .burger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* ── UTILITY ── */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .section-label { font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--pr); margin-bottom: 12px; }
+    .section-label.light { color: var(--gold-light); }
+    .h2 { font-family: var(--ff-serif); font-size: clamp(36px,5vw,60px); font-weight: 700; line-height: 1.12; color: var(--dc); }
+    .h2.light { color: #fff; }
+    .h3 { font-family: var(--ff-serif); font-size: clamp(24px,3vw,34px); font-weight: 600; line-height: 1.2; }
+    .p-lg { font-size: 16px; line-height: 1.75; color: var(--dc-60); max-width: 540px; }
+    .p-lg.light { color: rgba(255,255,255,.55); }
+    .p-sm { font-size: 14px; line-height: 1.65; color: var(--dc-60); }
+    .fade-up { opacity: 0; transform: translateY(40px); transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease); }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-in { opacity: 0; transition: opacity var(--dur) var(--ease) .15s; }
+    .fade-in.visible { opacity: 1; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100dvh; display: flex; align-items: flex-end;
+      position: relative; overflow: hidden;
+      background: var(--dc);
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(135deg, rgba(42,37,32,.50) 0%, rgba(42,37,32,.80) 100%),
+        linear-gradient(45deg, rgba(184,134,78,.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(196,96,74,.10) 0%, transparent 50%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900"><rect fill="%232A2520" width="1600" height="900"/><path d="M0 500 Q 400 300 800 450 T 1600 400 L 1600 900 L 0 900 Z" fill="%23B8864E" opacity=".12"/><path d="M0 650 Q 500 550 900 700 T 1600 620 L 1600 900 L 0 900 Z" fill="%23C4604A" opacity=".06"/><circle cx="1300" cy="200" r="280" fill="%23C9A96E" opacity=".04"/><circle cx="300" cy="400" r="200" fill="%23B8864E" opacity=".03"/></svg>') center / cover no-repeat;
+    }
+    .hero-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(90deg, rgba(255,255,255,.01) 0, rgba(255,255,255,.01) 1px, transparent 1px, transparent 60px),
+                  repeating-linear-gradient(0deg, rgba(255,255,255,.01) 0, rgba(255,255,255,.01) 1px, transparent 1px, transparent 60px);
+    }
+    .hero-inner {
+      position: relative; z-index: 2; width: 100%;
+      padding: 140px 48px 100px; max-width: 1280px; margin: 0 auto;
+    }
+    .hero-tag {
+      display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+      color: var(--gold-light); border: 1px solid rgba(201,169,110,.25); border-radius: 4px;
+      padding: 6px 16px; margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: var(--ff-serif); font-size: clamp(42px,7vw,90px); font-weight: 700;
+      line-height: 1.06; color: #fff; max-width: 860px;
+    }
+    .hero h1 .sub { display: block; font-family: var(--ff-sans); font-size: clamp(16px,2vw,22px); font-weight: 400; color: rgba(255,255,255,.5); line-height: 1.5; margin-top: 16px; letter-spacing: .04em; }
+    .hero h1 em { font-style: italic; color: var(--gold-light); }
+    .hero-sub {
+      font-size: 16px; line-height: 1.75; color: rgba(255,255,255,.55);
+      max-width: 500px; margin-top: 16px;
+    }
+    .hero-actions { display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+    .btn-pr { display: inline-flex; align-items: center; gap: 10px; padding: 15px 38px; border-radius: 6px; background: var(--ac); color: #fff; text-decoration: none; font-size: 13px; font-weight: 600; letter-spacing: .06em; transition: background .3s, transform .3s; border: none; cursor: pointer; }
+    .btn-pr:hover { background: var(--ac-light); transform: translateY(-2px); }
+    .btn-pr:active { transform: translateY(0); }
+    .btn-gh { display: inline-flex; align-items: center; gap: 10px; padding: 15px 38px; border-radius: 6px; border: 1px solid rgba(255,255,255,.2); color: rgba(255,255,255,.75); text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: .06em; transition: border-color .3s, color .3s, background .3s; }
+    .btn-gh:hover { border-color: var(--gold-light); color: #fff; background: rgba(255,255,255,.04); }
+    .hero-metrics { display: flex; gap: 56px; margin-top: 64px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,.08); flex-wrap: wrap; }
+    .hero-metrics-item { }
+    .hero-metrics-item .num { font-family: var(--ff-serif); font-size: 34px; font-weight: 700; color: var(--gold-light); line-height: 1; letter-spacing: -.02em; }
+    .hero-metrics-item .lbl { font-size: 11px; color: rgba(255,255,255,.4); letter-spacing: .06em; margin-top: 4px; text-transform: uppercase; }
+
+    /* ── BRAND BAR ── */
+    .brand-bar { padding: 48px 0; background: var(--lw); text-align: center; overflow: hidden; }
+    .brand-bar-inner { display: flex; justify-content: center; align-items: center; gap: 64px; flex-wrap: wrap; }
+    .brand-bar-item { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--dc-60); font-weight: 500; letter-spacing: .04em; }
+    .brand-bar-item .icon { width: 36px; height: 36px; border-radius: 6px; background: var(--rose-light); display: flex; align-items: center; justify-content: center; font-size: 16px; }
+
+    /* ── PROBLEM ── */
+    .problem { padding: 120px 0; background: var(--ww); position: relative; }
+    .problem::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--dc-12), transparent);
+    }
+    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .problem-visual {
+      aspect-ratio: 4/3; border-radius: 20px; overflow: hidden; position: relative;
+      background: linear-gradient(160deg, var(--dc), #3A3228);
+      box-shadow: 0 24px 64px rgba(42,37,32,.18), 0 8px 24px rgba(42,37,32,.10);
+      transition: transform .6s var(--ease), box-shadow .6s var(--ease);
+    }
+    .problem-visual:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 80px rgba(42,37,32,.22), 0 12px 32px rgba(42,37,32,.12);
+    }
+    .problem-visual img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 1.2s var(--ease);
+    }
+    .problem-visual:hover img {
+      transform: scale(1.04);
+    }
+    .problem-visual .img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(42,37,32,.25) 0%, rgba(42,37,32,.45) 60%, rgba(42,37,32,.60) 100%);
+      pointer-events: none;
+    }
+    .problem-visual .img-tag {
+      position: absolute; top: 24px; left: 24px;
+      padding: 8px 18px; border-radius: 6px;
+      background: rgba(42,37,32,.70); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 11px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.7);
+      z-index: 2;
+    }
+    .problem-visual .floating-text { position: absolute; bottom: 36px; left: 36px; z-index: 2; }
+    .problem-visual .floating-text .big { font-family: var(--ff-serif); font-size: 64px; font-weight: 700; color: rgba(255,255,255,.06); line-height: .8; }
+    .problem-visual .floating-text .small { font-size: 11px; color: rgba(255,255,255,.2); letter-spacing: .12em; text-transform: uppercase; margin-top: 8px; }
+    .problem-text .h2 { margin-bottom: 16px; }
+    .problem-text .p-lg { max-width: 480px; }
+    .problem-connector {
+      display: flex; align-items: center; gap: 16px; margin-top: 28px; padding: 16px 20px;
+      background: var(--lw); border-radius: 10px; border: 1px solid var(--dc-06);
+    }
+    .problem-connector .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--ac); flex-shrink: 0;
+      box-shadow: 0 0 0 4px rgba(196,96,74,.12);
+    }
+    .problem-connector .line {
+      flex: 1; height: 1px; background: linear-gradient(90deg, var(--dc-12), var(--pr));
+    }
+    .problem-connector span {
+      font-size: 12px; color: var(--dc-60); letter-spacing: .04em;
+    }
+    .problem-list { list-style: none; margin-top: 32px; display: grid; gap: 12px; }
+    .problem-list li { font-size: 15px; color: var(--dc-80); padding: 12px 20px; background: var(--lw); border-radius: 8px; display: flex; align-items: center; gap: 12px; transition: background .3s, transform .3s; cursor: default; }
+    .problem-list li:hover { background: var(--sf); transform: translateX(4px); }
+    .problem-list li .tag { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #fff; background: var(--pr); padding: 2px 10px; border-radius: 4px; flex-shrink: 0; }
+
+    /* ── TREATMENTS ── */
+    .treatments { padding: 120px 0; background: var(--ww); position: relative; }
+    .treatments-header { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; margin-bottom: 72px; align-items: end; }
+    .treatments-header .p-lg { max-width: 440px; }
+    .treatments-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; background: var(--dc-12); border-radius: 12px; overflow: hidden; }
+    .treatment-card { background: var(--lw); padding: 48px 36px; position: relative; overflow: hidden; transition: all .4s; }
+    .treatment-card:hover { background: var(--sf); }
+    .treatment-card .emoji { font-size: 36px; margin-bottom: 20px; display: block; }
+    .treatment-card h4 { font-family: var(--ff-serif); font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+    .treatment-card p { font-size: 13px; color: var(--dc-60); line-height: 1.7; }
+    .treatment-card .deco { position: absolute; bottom: -30px; right: -30px; width: 100px; height: 100px; border-radius: 50%; opacity: .04; }
+    .treatment-card:nth-child(1) .deco { background: var(--pr); }
+    .treatment-card:nth-child(2) .deco { background: var(--ac); }
+    .treatment-card:nth-child(3) .deco { background: var(--gold); }
+    .treatment-card:nth-child(4) .deco { background: var(--sd); }
+    .treatments-footer { text-align: center; margin-top: 48px; }
+    .treatments-footer .p-sm { color: var(--dc-40); font-style: italic; max-width: 480px; margin: 0 auto; }
+
+    /* ── EXPERTISE ── */
+    .expertise {
+      padding: 140px 0; position: relative; overflow: hidden;
+      background: var(--dc);
+    }
+    .expertise::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 15% 50%, rgba(184,134,78,.10) 0%, transparent 55%),
+                  radial-gradient(ellipse at 85% 50%, rgba(196,96,74,.06) 0%, transparent 50%);
+    }
+    .expertise-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center; }
+    .expertise-visual {
+      aspect-ratio: 1; border-radius: 20px; overflow: hidden; position: relative;
+      background: linear-gradient(160deg, #3A3228, var(--dc));
+      border: 1px solid rgba(255,255,255,.06);
+      box-shadow: 0 24px 64px rgba(0,0,0,.30), 0 8px 24px rgba(0,0,0,.15), inset 0 1px 0 rgba(255,255,255,.04);
+      transition: transform .6s var(--ease), box-shadow .6s var(--ease);
+    }
+    .expertise-visual:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 80px rgba(0,0,0,.35), 0 12px 32px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.06);
+    }
+    .expertise-visual img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      transition: transform 1.2s var(--ease);
+    }
+    .expertise-visual:hover img {
+      transform: scale(1.04);
+    }
+    .expertise-visual .img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(42,37,32,.15) 0%, rgba(42,37,32,.35) 60%, rgba(42,37,32,.50) 100%);
+      pointer-events: none;
+    }
+    .expertise-visual .img-tag {
+      position: absolute; top: 24px; right: 24px;
+      padding: 8px 18px; border-radius: 6px;
+      background: rgba(42,37,32,.70); backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,.08);
+      font-size: 11px; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--gold-light);
+      z-index: 2;
+    }
+    .expertise-visual .grid { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, rgba(255,255,255,.02) 0, rgba(255,255,255,.02) 1px, transparent 1px, transparent 40px), repeating-linear-gradient(0deg, rgba(255,255,255,.02) 0, rgba(255,255,255,.02) 1px, transparent 1px, transparent 40px); }
+    .expertise-text .h2 { margin-bottom: 20px; }
+    .expertise-text .p-lg { max-width: 480px; }
+    .expertise-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 36px; }
+    .expertise-card { padding: 24px; background: rgba(255,255,255,.04); border-radius: 10px; border: 1px solid rgba(255,255,255,.06); transition: background .3s, transform .3s; }
+    .expertise-card:hover { background: rgba(255,255,255,.07); transform: translateY(-2px); }
+    .expertise-card .num { font-family: var(--ff-serif); font-size: 28px; font-weight: 700; color: var(--gold-light); line-height: 1; margin-bottom: 6px; }
+    .expertise-card .label { font-size: 13px; color: rgba(255,255,255,.5); line-height: 1.5; }
+
+    /* ── SOCIAL ── */
+    .social-proof { padding: 100px 0; background: var(--lw); text-align: center; }
+    .social-proof-inner { max-width: 720px; margin: 0 auto; }
+    .social-proof .h2 { margin-bottom: 12px; }
+    .social-proof .p-lg { margin: 0 auto 40px; }
+    .social-actions { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+    .social-btn { display: inline-flex; align-items: center; gap: 12px; padding: 16px 40px; border-radius: 6px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all .3s; }
+    .social-btn.primary { background: var(--pr); color: #fff; }
+    .social-btn.primary:hover { background: var(--pr-dark); transform: translateY(-2px); }
+    .social-btn.outline { border: 2px solid var(--pr); color: var(--pr); }
+    .social-btn.outline:hover { background: var(--pr); color: #fff; transform: translateY(-2px); }
+    .social-icons { display: flex; justify-content: center; gap: 24px; margin-top: 32px; }
+    .social-icons a { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 8px; border: 1px solid var(--dc-12); color: var(--dc-60); text-decoration: none; font-size: 15px; font-weight: 600; transition: all .3s; }
+    .social-icons a:hover { border-color: var(--pr); color: var(--pr); background: rgba(184,134,78,.06); transform: translateY(-2px); }
+
+    /* ── BUSINESS CTA ── */
+    .business { padding: 120px 0; position: relative; overflow: hidden; background: var(--dc); }
+    .business::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(184,134,78,.08) 0%, transparent 60%);
+    }
+    .business-inner { position: relative; z-index: 2; text-align: center; max-width: 640px; margin: 0 auto; }
+    .business-inner .h2 { margin-bottom: 12px; }
+    .business-inner .p-lg { margin: 0 auto 36px; }
+    .business-phone { font-family: var(--ff-sans); font-size: clamp(36px,5vw,56px); font-weight: 700; color: var(--gold-light); letter-spacing: .02em; margin-bottom: 12px; display: block; }
+    .business-phone:hover { color: var(--pr-light); }
+    .business-label { font-size: 12px; color: rgba(255,255,255,.3); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+    .business-actions { display: flex; gap: 16px; justify-content: center; margin-top: 36px; flex-wrap: wrap; }
+    .business-trust { display: flex; justify-content: center; gap: 24px; margin-top: 36px; flex-wrap: wrap; }
+    .business-trust span { font-size: 12px; color: rgba(255,255,255,.25); letter-spacing: .04em; }
+
+    /* ── FOOTER ── */
+    footer { background: #1F1B18; padding: 64px 0 32px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
+    .footer-brand .nav-logo { color: #fff; font-size: 22px; display: block; }
+    .footer-brand .nav-logo span { color: var(--gold); }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,.35); margin-top: 12px; max-width: 320px; line-height: 1.7; }
+    .footer-col h4 { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: 16px; }
+    .footer-col a { display: block; font-size: 14px; color: rgba(255,255,255,.45); text-decoration: none; padding: 5px 0; transition: color .3s; }
+    .footer-col a:hover { color: var(--gold-light); }
+    .footer-bottom { padding-top: 24px; border-top: 1px solid rgba(255,255,255,.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,.2); }
+    .footer-bottom a { color: rgba(255,255,255,.3); text-decoration: none; font-size: 12px; transition: color .3s; }
+    .footer-bottom a:hover { color: var(--gold-light); }
+    .footer-bottom .phone { font-weight: 600; color: rgba(255,255,255,.4); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .problem-grid { grid-template-columns: 1fr; gap: 48px; }
+      .treatments-header { grid-template-columns: 1fr; gap: 16px; }
+      .treatments-grid { grid-template-columns: repeat(2,1fr); }
+      .expertise-inner { grid-template-columns: 1fr; gap: 48px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 24px; }
+      nav { padding: 16px 24px; }
+      nav.scrolled { padding: 12px 24px; }
+      .nav-links {
+        display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(252,248,244,.98); backdrop-filter: blur(24px);
+        flex-direction: column; justify-content: center; gap: 28px; padding: 80px 24px;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 20px; color: var(--dc) !important; }
+      .nav-links a::after { background: var(--pr) !important; }
+      .nav-links .nav-cta { font-size: 14px; padding: 14px 32px; }
+      .burger { display: flex; }
+      .hero-inner { padding: 120px 24px 60px; }
+      .hero h1 { font-size: clamp(34px,10vw,48px); }
+      .hero-metrics { gap: 32px; }
+      .problem, .treatments, .expertise, .social-proof, .business { padding: 80px 0; }
+      .treatments-grid { grid-template-columns: 1fr 1fr; }
+      .expertise-cards { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn-pr, .hero-actions .btn-gh { width: 100%; justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .treatments-grid { grid-template-columns: 1fr; }
+      .social-actions { flex-direction: column; align-items: center; }
+      .social-btn { width: 100%; justify-content: center; }
+      .business-actions { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ─── NAV ─── -->
+  <nav id="navbar">
+    <div class="nav-logo">DAMiYA <span>· 达美亚</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problem">皮肤问题</a></li>
+      <li><a href="#treatments">祛斑项目</a></li>
+      <li><a href="#expertise">专业资质</a></li>
+      <li><a href="#social">关注我们</a></li>
+      <li><a href="#business" class="nav-cta">全国招商</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="菜单">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-inner">
+      <div class="hero-tag fade-up">资深专业 · 一对一私人定制</div>
+      <h1 class="fade-up">
+        汉焱巨美特养肤式祛斑
+        <span class="sub">资深专业老师操作 · 一对一私人定制 · 科学祛斑不伤肤</span>
+      </h1>
+      <p class="hero-sub fade-up">专注各类色斑问题——老年斑、表皮斑、真皮斑、雀斑、空心斑、黄褐斑。品你次技术法境保络身，让肌肤重获无瑕透亮。</p>
+      <div class="hero-actions fade-up">
+        <a href="#social" class="btn-pr">关注+私信</a>
+        <a href="#business" class="btn-gh">全国招商合作</a>
+      </div>
+      <div class="hero-metrics fade-up">
+        <div class="hero-metrics-item">
+          <div class="num">10+</div>
+          <div class="lbl">年祛斑经验</div>
+        </div>
+        <div class="hero-metrics-item">
+          <div class="num">6</div>
+          <div class="lbl">类顽固色斑</div>
+        </div>
+        <div class="hero-metrics-item">
+          <div class="num">1v1</div>
+          <div class="lbl">私人定制方案</div>
+        </div>
+        <div class="hero-metrics-item">
+          <div class="num">全国</div>
+          <div class="lbl">招商合作</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BRAND BAR ─── -->
+  <section class="brand-bar fade-up">
+    <div class="container brand-bar-inner">
+      <div class="brand-bar-item">
+        <div class="icon">✦</div>
+        <span>资深专业老师操作</span>
+      </div>
+      <div class="brand-bar-item">
+        <div class="icon">◈</div>
+        <span>一对一私人定制</span>
+      </div>
+      <div class="brand-bar-item">
+        <div class="icon">◇</div>
+        <span>汉焱巨美特养肤式</span>
+      </div>
+      <div class="brand-bar-item">
+        <div class="icon">▣</div>
+        <span>全国招商合作</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROBLEM ─── -->
+  <section class="problem" id="problem">
+    <div class="container problem-grid">
+      <div class="problem-visual fade-in">
+        <img src="images/after.jpg" alt="专业梅姐">
+        <div class="img-overlay"></div>
+        <div class="img-tag"> 祛斑效果 </div>
+        <div class="floating-text">
+          <div class="big">有问题</div>
+          <div class="small">别让色斑困扰你</div>
+        </div>
+      </div>
+      <div class="problem-text fade-up">
+        <p class="section-label">· 你的皮肤困扰</p>
+        <h2 class="h2">有问题，<br>找达美亚</h2>
+        <p class="p-lg">汉焱巨美特抗养肤式抗衰祛斑，针对各类顽固色斑，品你次技术法境保络身，从根源解决肌肤问题。</p>
+        <div class="problem-connector">
+          <div class="dot"></div>
+          <div class="line"></div>
+          <span>真实案例 · 效果见证</span>
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+        <ul class="problem-list">
+          <li><span class="tag">常见</span>老年斑 —— 年龄与日晒的累积</li>
+          <li><span class="tag">顽固</span>表皮斑 · 真皮斑 —— 层次不一，难度各异</li>
+          <li><span class="tag">遗传</span>雀斑 · 空心斑 —— 从小困扰，影响自信</li>
+          <li><span class="tag">最难</span>黄褐斑 —— 汉焱巨美特核心攻克</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── TREATMENTS ─── -->
+  <section class="treatments" id="treatments">
+    <div class="container">
+      <div class="treatments-header fade-up">
+        <div>
+          <p class="section-label">· 祛斑项目</p>
+          <h2 class="h2">科学分斑<br>精准祛除</h2>
+        </div>
+        <p class="p-lg">每种斑都有不同的成因和层次，汉焱巨美特养肤式祛斑，资深专业老师一对一操作，定制专属祛斑方案。</p>
+      </div>
+      <div class="treatments-grid fade-up">
+        <div class="treatment-card">
+          <span class="emoji">🌿</span>
+          <h4>老年斑</h4>
+          <p>因年龄增长、日晒积累形成的褐色斑块。养肤式修复，温和淡化。</p>
+          <div class="deco"></div>
+        </div>
+        <div class="treatment-card">
+          <span class="emoji">🔬</span>
+          <h4>表皮斑 · 真皮斑</h4>
+          <p>根据斑的层次深浅定向调理，层层渗透，不伤肤质。</p>
+          <div class="deco"></div>
+        </div>
+        <div class="treatment-card">
+          <span class="emoji">✦</span>
+          <h4>雀斑 · 空心斑</h4>
+          <p>遗传性色斑与角质异常形成的空心斑，一对一精准方案。</p>
+          <div class="deco"></div>
+        </div>
+        <div class="treatment-card">
+          <span class="emoji">◈</span>
+          <h4>黄褐斑</h4>
+          <p>最难祛的斑种，汉焱巨美特核心技术法境保络身，品你次技术攻克。</p>
+          <div class="deco"></div>
+        </div>
+      </div>
+      <div class="treatments-footer fade-up">
+        <p class="p-sm">品你次技术法境保络身 —— 汉焱巨美特抗养肤式抗衰祛斑法</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERTISE ─── -->
+  <section class="expertise" id="expertise">
+    <div class="container expertise-inner">
+      <div class="expertise-text fade-up">
+        <p class="section-label light">· 专业资质</p>
+        <h2 class="h2 light">资深专业老师<br>一对一私人定制</h2>
+        <p class="p-lg light">汉焱巨美特养肤式祛斑，由资深专业老师亲自操作，根据你的肤质和斑种，一对一私人定制专属方案。品你次技术法境保络身，让每一次护理都精准有效。</p>
+        <div class="expertise-cards">
+          <div class="expertise-card">
+            <div class="num">1v1</div>
+            <div class="label">一对一私人定制<br>专属祛斑方案</div>
+          </div>
+          <div class="expertise-card">
+            <div class="num">资深</div>
+            <div class="label">资深专业老师操作<br>多年祛斑经验</div>
+          </div>
+          <div class="expertise-card">
+            <div class="num">养肤</div>
+            <div class="label">养肤式祛斑<br>不伤肤 · 更安全</div>
+          </div>
+          <div class="expertise-card">
+            <div class="num">法境</div>
+            <div class="label">品你次技术法境保络身<br>核心技术保障</div>
+          </div>
+        </div>
+      </div>
+      <div class="expertise-visual fade-in">
+        <img src="images/before.png" alt="祛斑后">
+        <div class="img-overlay"></div>
+        <div class="img-tag">资深专业 · 梅姐</div>
+        <div class="grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── SOCIAL PROOF ─── -->
+  <section class="social-proof" id="social">
+    <div class="container social-proof-inner fade-up">
+      <p class="section-label">· 关注我们</p>
+      <h2 class="h2">关注+私信</h2>
+      <p class="p-lg">关注达美亚官方账号，私信咨询你的皮肤问题。资深专业老师在线解答，为你量身定制祛斑方案。汉焱巨美特养肤式祛斑，让你的肌肤重获自信。</p>
+      <div class="social-actions">
+        <a href="#" class="social-btn primary">关注官方账号</a>
+        <a href="#" class="social-btn outline">私信咨询</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" aria-label="微信">微信</a>
+        <a href="#" aria-label="抖音">抖音</a>
+        <a href="#" aria-label="小红书">小红书</a>
+        <a href="#" aria-label="微博">微博</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── BUSINESS CTA ─── -->
+  <section class="business" id="business">
+    <div class="container business-inner fade-up">
+      <p class="section-label light">· 全国招商合作</p>
+      <h2 class="h2 light">加入达美亚<br>共创美业未来</h2>
+      <p class="p-lg light">汉焱巨美特养肤式祛斑项目全国招商，资深技术扶持，品牌运营支持。诚邀有志于祛斑美业的合作伙伴加入我们。</p>
+      <div class="business-label">招商合作热线</div>
+      <a href="tel:13562024562" class="business-phone">13562024562</a>
+      <div class="business-actions">
+        <a href="tel:13562024562" class="btn-pr">立即致电咨询</a>
+        <a href="#social" class="btn-gh">私信了解详情</a>
+      </div>
+      <div class="business-trust">
+        <span>资深技术扶持</span>
+        <span>·</span>
+        <span>品牌运营支持</span>
+        <span>·</span>
+        <span>全国市场布局</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">DAMiYA <span>· 达美亚</span></div>
+          <p>汉焱巨美特养肤式祛斑——资深专业老师操作，一对一私人定制。专注各类色斑问题，让肌肤重获无瑕透亮。</p>
+        </div>
+        <div class="footer-col">
+          <h4>祛斑项目</h4>
+          <a href="#">老年斑祛除</a>
+          <a href="#">表皮斑真皮斑</a>
+          <a href="#">雀斑空心斑</a>
+          <a href="#">黄褐斑攻克</a>
+        </div>
+        <div class="footer-col">
+          <h4>合作联系</h4>
+          <a href="tel:13562024562">13562024562</a>
+          <a href="#">全国招商合作</a>
+          <a href="#">品牌加盟</a>
+          <a href="#">技术培训</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 DAMiYA达美亚 · 汉焱巨美特 · 保留所有权利</p>
+        <span><a href="#" class="phone">招商热线：13562024562</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const burger = document.getElementById('burger');
+    const navLinks = document.getElementById('navLinks');
+
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        burger.classList.remove('open');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    const revealEls = document.querySelectorAll('.fade-up, .fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -60px 0px', threshold: .08 });
+    revealEls.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
